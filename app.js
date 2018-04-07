@@ -35,5 +35,13 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
+
+  myShowSuccess: function (message) {
+    wx.showToast({
+      title: message,
+      duration: 2000,
+      image: "/images/Common/Success.png",
+    })
+  },
 })
