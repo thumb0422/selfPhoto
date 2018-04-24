@@ -33,5 +33,25 @@ Page({
         console.log('chooseimage complete')
       }
     })
+  },
+  testAPI:function(){
+    wx.request({
+      url: 'http://127.0.0.1:3000/api/postTest',
+      data: {
+        orderId: '1'
+      },
+      method: 'POST',
+      success: function (res) {
+        console.log(res);
+        if (res.statusCode == 200){
+          
+        }else{
+
+        }
+      },
+      fail:function(err){
+        console.log(err)
+      }
+    });
   }
 })
