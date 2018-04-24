@@ -51,6 +51,9 @@ Page({
       },
       fail:function(err){
         console.log(err)
+      },
+      complete:function(){
+        
       }
     });
   }
