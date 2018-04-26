@@ -18,10 +18,25 @@ Page({
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有  
       success: function (res) {
         // tempApp.myShowSuccess('success')
-        console.log('chooseimage success,res =',res.tempFilePaths)
+        var tempFilePaths = res.tempFilePaths
+        console.log('chooseimage success,res =', tempFilePaths)
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片  
         _this.setData({
           tempFilePaths: res.tempFilePaths
+        })
+        //上传图片
+        wx.uploadFile({
+          url: 'http://127.0.0.1:3000/aliyun/api/upload',
+          filePath: tempFilePaths[0],
+          name: 'file',
+          formData: {
+            'user': 'test'
+          },
+          success: function (res) {
+            var data = res.data
+            //do something
+            console.log('uploadData res:',data)
+          }
         })
       },
       fail:function(error){
@@ -34,27 +49,27 @@ Page({
       }
     })
   },
-  testAPI:function(){
+  faceApi: function () {
     wx.request({
-      url: 'http://127.0.0.1:3000/api/postTest',
+      url: 'http://127.0.0.1:3000/aliyun/api/faceapi',
       data: {
         orderId: '1'
       },
       method: 'POST',
       success: function (res) {
         console.log(res);
-        if (res.statusCode == 200){
-          
-        }else{
+        if (res.statusCode == 200) {
+         
+        } else {
 
         }
       },
-      fail:function(err){
+      fail: function (err) {
         console.log(err)
       },
-      complete:function(){
-        
+      complete: function () {
+
       }
     });
-  }
+  },  
 })
