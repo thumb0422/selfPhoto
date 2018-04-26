@@ -36,6 +36,9 @@ Page({
             var data = res.data
             //do something
             console.log('uploadData res:',data)
+            _this.setData({
+              jsondata: data
+            })
           }
         })
       },
