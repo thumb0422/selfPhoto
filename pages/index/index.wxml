@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class='bgcontainer' style='background:url("/img/back.jpg");-webkit-background-size:cover;'>
-   <!-- <text class="topText">{{jsondata}}</text> -->
-   <!-- <image class='myImageView' src="{{tempFilePaths}} " mode="aspectFit" />   -->
+  <!-- <text class="topText">{{jsondata}}</text> -->
+  <!-- <image class='myImageView' src="{{tempFilePaths}} " mode="aspectFit" />   -->
   <text class="topText">恭喜你，达到92.5分</text>
-   <image class='myImageView' src="/img/1.png" mode="aspectFit" /> 
+  <image class='myImageView' src="/img/1.png" mode="aspectFit" />
   <button class='bottomBtn' bindtap="chooseimage">拍照/选图</button>
 </view>

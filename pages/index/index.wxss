@@ -1,1 +1,37 @@
 /**index.wxss**/
+
+.bgcontainer {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+.bgcontainer .topText {
+   width: 100%; 
+  height: 40pt;
+  color: burlywood;
+   /* position: fixed;  */
+  top: 10pt;
+   text-align: center; 
+}
+
+.bgcontainer .bottomBtn {
+   width: 100%; 
+  height: 40pt;
+  background-color: yellow;
+  color: green;
+  /* position: fixed; */
+   bottom: 10pt; 
+}
+
+.bgcontainer .myImageView {
+  flex: 1;
+  /* align-content: center; */
+  /* flex-grow: 1; */
+}
