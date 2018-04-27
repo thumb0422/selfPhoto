@@ -1,7 +1,7 @@
 /**app.wxss**/
 
 page {
-  /* display: block; */
+  display: flex; 
   height: 100%;
   background-color: white;
 }
@@ -16,10 +16,11 @@ page {
 
 .topText {
   width: 100%;
-  background-color: yellow;
-  color: green;
+  /* background-color: yellow; */
+  color: burlywood;
   position: fixed;
   top: 10pt;
+  text-align:center;
 }
 
 .bottomBtn {
@@ -31,5 +32,5 @@ page {
 }
 
 .myImageView {
-
+  
 }
