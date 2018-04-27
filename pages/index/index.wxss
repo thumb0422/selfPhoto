@@ -1,7 +1,7 @@
 /**index.wxss**/
 
 .bgcontainer {
-  background-color: white;
+  background-color: #003789;
   width: 100%;
   height: 100%;
   flex-wrap: nowrap;
@@ -13,25 +13,25 @@
 }
 
 .bgcontainer .topText {
-   width: 100%; 
+  width: 100%;
   height: 40pt;
   color: burlywood;
-   /* position: fixed;  */
   top: 10pt;
-   text-align: center; 
+  position: fixed;
+  text-align: center;
 }
 
 .bgcontainer .bottomBtn {
-   width: 100%; 
+  width: 100%;
   height: 40pt;
   background-color: yellow;
   color: green;
-  /* position: fixed; */
-   bottom: 10pt; 
+  /* position: fixed;  */
+  bottom: 10pt;
 }
 
 .bgcontainer .myImageView {
   flex: 1;
-  /* align-content: center; */
-  /* flex-grow: 1; */
+   /* align-content: center;  */
+   /* flex-grow: 1;  */
 }
