@@ -1,7 +1,6 @@
 <!--index.wxml-->
-<view class="container">
-  <button style="margin:20rpx 15rpx 40rpx 15rpx;" bindtap="chooseimage">获取图片</button>
-  <button style="margin:40rpx,20rpx,-50rpx,20rpx;" bindtap="faceApi">faceApi</button>
-  <text class="bottom-item-text" style="margin:20rpx 5rpx 10rpx 5rpx;word-break: break-all">{{jsondata}}</text>  
-  <image src="{{tempFilePaths }} " mode="aspectFit" style="margin:40rpx; height: 450rpx" />
+<view class='bgcontainer' style='background:url("/img/back.jpg");-webkit-background-size:cover;'>
+  <text class="topText">{{jsondata}}</text>
+  <image class='myImageView' src="{{tempFilePaths}} " mode="aspectFit"/>
+  <button class='bottomBtn' bindtap="chooseimage">拍照/选图</button>
 </view>

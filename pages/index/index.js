@@ -17,6 +17,7 @@ Page({
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有  
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有  
       success: function (res) {
+        //先清空数据 TODO 
         // tempApp.myShowSuccess('success')
         var tempFilePaths = res.tempFilePaths
         console.log('chooseimage success,res =', tempFilePaths)
@@ -34,17 +35,22 @@ Page({
           },
           success: function (res) {
             var data = res.data
-            //do something
             console.log('uploadData res:',data)
             _this.setData({              
               jsondata: data
             })
+          },
+          fail:function(error){
+            wx.showToast({
+              title: '颜值分析失败，请重新选择',
+            })
+          },
+          complete:function(){
+
           }
         })
       },
       fail:function(error){
-        console.log('---- ', tempApp.globalData)
-        tempApp.myShowSuccess('success')
         console.log('chooseimage failed ',error)
       },
       complete:function(){
