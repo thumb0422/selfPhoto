@@ -3,35 +3,29 @@
 .bgcontainer {
   background-color: #003789;
   width: 100%;
-  height: 100%;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  display: -webkit-flex;
-  -webkit-flex-direction: column;
   display: flex;
   flex-direction: column;
 }
 
 .bgcontainer .topText {
-  width: 100%;
-  height: 40pt;
+  /* width: 100%; */
+  height: 40rpx;
   color: burlywood;
-  top: 10pt;
-  position: fixed;
+  padding: 40rpx;
+  /* position: fixed; */
   text-align: center;
-}
-
-.bgcontainer .bottomBtn {
-  width: 100%;
-  height: 40pt;
-  background-color: yellow;
-  color: green;
-  /* position: fixed;  */
-  bottom: 10pt;
 }
 
 .bgcontainer .myImageView {
   flex: 1;
-   /* align-content: center;  */
-   /* flex-grow: 1;  */
+  margin: 0 auto;
+}
+
+.bgcontainer .bottomBtn {
+  margin-top: 40rpx;
+  width: 100%;
+  height: 110rpx;
+  line-height: 110rpx;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: green;
 }
