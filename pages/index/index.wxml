@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class='bgcontainer' style='background:url("/img/back.jpg");-webkit-background-size:cover;'>
-  <text class="topText">{{jsondata}}</text>
+  <text class="topText">您的颜值打分为:{{jsondata}}</text>
   <image class='myImageView' src="{{tempFilePaths}} " mode="aspectFit" />
   <!-- <text class="topText">恭喜你恭喜你恭喜你恭喜你恭喜你</text>
   <image class='myImageView' src="/img/1.png" mode="aspectFit"/> -->

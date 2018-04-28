@@ -2,6 +2,7 @@
 //获取应用实例
 const app = getApp()
 var tempApp = require('../../app.js')
+var util = require('../../utils/util.js')
 Page({
   data: {
     tempFilePaths: ''
@@ -34,10 +35,10 @@ Page({
             'user': 'test'
           },
           success: function (res) {
-            var data = res.data
-            console.log('uploadData res:',data)
+            var data = util.stringToJson(res.data)
+            console.log('uploadData res:', res)
             _this.setData({              
-              jsondata: data
+              jsondata: data.result
             })
           },
           fail:function(error){
