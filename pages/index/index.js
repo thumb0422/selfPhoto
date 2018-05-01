@@ -37,13 +37,20 @@ Page({
           success: function (res) {
             var data = util.stringToJson(res.data)
             console.log('uploadData res:', res)
-            _this.setData({              
-              jsondata: data.result
-            })
+            if (data.code == 200){
+              _this.setData({
+                jsondata: '您的颜值评分为:' + data.result
+              })
+            }else {
+              wx.showToast({
+                title: '颜值分析失败',
+              })
+            }
           },
           fail:function(error){
+            console.log('error:',error)
             wx.showToast({
-              title: '颜值分析失败，请重新选择',
+              title: '颜值分析失败',
             })
           },
           complete:function(){
@@ -61,7 +68,7 @@ Page({
   },
   faceApi: function () {
     wx.request({
-      url: 'http://127.0.0.1:3000/aliyun/api/faceapi',
+      url: 'http://127.0.0.1:3000/aliyun/api/postTest',
       data: {
         orderId: '1'
       },
